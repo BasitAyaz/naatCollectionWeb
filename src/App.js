@@ -1,18 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Dashboard from './components/main'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p style={{
-          fontSize:'2.5em'
-        }}>
-          Naat Collection
-        </p>
-      <button className='btn'>+</button>
-      </header>
+      <Dashboard />
     </div>
   );
 }

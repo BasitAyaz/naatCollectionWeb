@@ -1,4 +1,3 @@
-
 .App-header {
   background-color: #404040;
   min-height: 100vh;
@@ -9,17 +8,69 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.btn{
-  background-color: #585858;
-  color: white;
-  padding: 15px;
-  margin: 10px;
-  width: 80px;
-  height: 80px;
+.naatTitle {
+  background-color: transparent;
   border: none;
-  border-radius: 40px;
   font-size: 2em;
+  outline: none;
+  width: 100%;
+  color: white;
+  padding: 12px;
+}
+.inp {
+  background-color: transparent;
+  border: none;
+  padding: 12px;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+.btnUpload{
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #585858;
+  padding: 12px;
+  margin: 7px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: .5s;
+}
+.btnUpload:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.closebtn{
+  padding: 10px;
+  background-color: transparent;
+  color: red;
   font-weight: bold;
-  box-shadow: 0 5px 8px #000;
+  border: none;
+  outline: none;
+}
+.btnAdd {
+  font-size: 2em;
+  padding-bottom: 12px;
+  margin: 7px;
+  width: 85px;
+  height: 85px;
+  border: none;
+  border-radius: 45px;
+  background-color: #585858;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: .5s;
+}
+.btnAdd:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.file {
+  opacity: 0;
+}
+.fileDisplay {
+  font-size: 2.5em;
+  color: #b58652;
+  cursor: pointer;
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
 }
