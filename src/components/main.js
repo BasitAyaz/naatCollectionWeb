@@ -6,6 +6,11 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      naatTitle:'',
+      naatKhwanName:'',
+      naatVideo:'',
+      naatAudio:'',
+      naatLyrics:'',
       audioUpload: false,
       videoUpload: false,
       lyricsUpload: false,
@@ -16,6 +21,18 @@ class Dashboard extends React.Component {
   }
   closeUpload(e) {
     this.setState({ [e]: false });
+  }
+  upload(e){
+    const {naatTitle,naatKhwanName,naatLyrics,naatVideo,naatAudio}= this.state
+    let obj = {
+      naatTitle,
+      naatKhwanName
+    }
+    console.log(obj)
+    this.setState({
+      naatTitle:'',
+      naatKhwanName:''
+    })
   }
   render() {
     return (
@@ -34,11 +51,15 @@ class Dashboard extends React.Component {
               </div>
               <div className="col-md-6">
                 <input
+                value={this.state.naatTitle}
+                onChange={(e)=>this.setState({naatTitle:e.target.value})}
                   className="naatTitle"
                   placeholder="Click to Add Naat Title"
                 />
                 <br />
                 <input
+                value={this.state.naatKhwanName}
+                 onChange={(e)=>this.setState({naatKhwanName:e.target.value})}
                   className="inp"
                   placeholder="Click to add Naat Khwan Name"
                 />
@@ -89,7 +110,7 @@ class Dashboard extends React.Component {
                       onClick={(e) => this.closeUpload("videoUpload")}
                       className="closebtn"
                     >
-                     <i class="fas fa-times"></i>
+                      <i class="fas fa-times"></i>
                     </button>
                   ) : (
                     false
@@ -119,7 +140,7 @@ class Dashboard extends React.Component {
                       onClick={(e) => this.closeUpload("lyricsUpload")}
                       className="closebtn"
                     >
-                     <i class="fas fa-times"></i>
+                      <i class="fas fa-times"></i>
                     </button>
                   ) : (
                     false
@@ -140,7 +161,7 @@ class Dashboard extends React.Component {
             <hr className="mb-3" />
           </div>
           <div className="mb-5">
-            <button className="btnAdd">+</button>
+            <button onClick={(e)=>this.upload(e)} className="btnAdd">+</button>
           </div>
           <div
             className="container-fluid"
